@@ -10,7 +10,7 @@ export default function Intro() {
       showCursor: true,
       backDelay: 1500,
       backSpeed: 60,
-      strings: ["Computer Programming", "Designing", "Finance", "Accounting", ],
+      strings: ["Computer Programming", "Designing", "Finance", "Accounting"],
     });
   }, []);
 
@@ -18,7 +18,12 @@ export default function Intro() {
     <div className="intro" id="intro">
       <div className="left">
         <div className="imgContainer">
-          <img src="assets/personal-imgs/naeem_shah.jpg" alt="" />
+          <img
+            src={`${
+              import.meta.env.BASE_URL
+            }assets/personal-imgs/naeem_shah.jpg`}
+            alt=""
+          />
         </div>
       </div>
       <div className="right">
@@ -30,7 +35,7 @@ export default function Intro() {
           </h3>
         </div>
         <a href="#portfolio">
-          <img src="assets/down.png" alt="" />
+          <img src={`${import.meta.env.BASE_URL}assets/down.png`} alt="" />
         </a>
       </div>
     </div>

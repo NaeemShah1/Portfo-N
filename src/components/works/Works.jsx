@@ -6,30 +6,24 @@ export default function Works() {
   const data = [
     {
       id: "1",
-      icon: "./assets/mobile.png",
+      icon: `${import.meta.env.BASE_URL}assets/mobile.png`,
       title: "Back-end Development",
-      desc:
-        "Using Python as the back-end programming language. ",
-      img:
-        "./assets/certificates/mosh-python.PNG",
+      desc: "Using Python as the back-end programming language. ",
+      img: `${import.meta.env.BASE_URL}assets/certificates/mosh-python.PNG`,
     },
     {
       id: "2",
-      icon: "./assets/globe.png",
+      icon: `${import.meta.env.BASE_URL}assets/globe.png`,
       title: "Front-End Development",
-      desc:
-        "Using Java Script as the back-end programming language.",
-      img:
-        "./assets/certificates/mosh-react.PNG",
+      desc: "Using Java Script as the back-end programming language.",
+      img: `${import.meta.env.BASE_URL}assets/certificates/mosh-react.PNG`,
     },
     {
       id: "3",
-      icon: "./assets/writing.png",
+      icon: `${import.meta.env.BASE_URL}assets/writing.png`,
       title: "Data Base",
-      desc:
-        "MySQL is used by me.",
-      img:
-        "./assets/certificates/mosh-sql.PNG",
+      desc: "MySQL is used by me.",
+      img: `${import.meta.env.BASE_URL}assets/certificates/mosh-sql.PNG`,
     },
   ];
 
@@ -38,7 +32,7 @@ export default function Works() {
       ? setCurrentSlide(currentSlide > 0 ? currentSlide - 1 : 2)
       : setCurrentSlide(currentSlide < data.length - 1 ? currentSlide + 1 : 0);
   };
-  
+
   return (
     <div className="works" id="works">
       <div
@@ -59,23 +53,20 @@ export default function Works() {
                 </div>
               </div>
               <div className="right">
-                <img
-                  src={d.img}
-                  alt=""
-                />
+                <img src={d.img} alt="" />
               </div>
             </div>
           </div>
         ))}
       </div>
       <img
-        src="assets/arrow.png"
+        src={`${import.meta.env.BASE_URL}assets/arrow.png`}
         className="arrow left"
         alt=""
         onClick={() => handleClick("left")}
       />
       <img
-        src="assets/arrow.png"
+        src={`${import.meta.env.BASE_URL}assets/arrow.png`}
         className="arrow right"
         alt=""
         onClick={() => handleClick()}
